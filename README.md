@@ -2,7 +2,7 @@
 
 A machine learning-powered fraud detection system that combines traditional credit card transaction analysis with cybersecurity indicators to identify suspicious and fraudulent activities.
 
-## 🎯 Overview
+## Overview
 
 This project implements a two-stage fraud detection pipeline:
 1. **Anomaly Detection**: Uses Isolation Forest to flag suspicious transactions
@@ -10,7 +10,7 @@ This project implements a two-stage fraud detection pipeline:
 
 The system enhances traditional financial features with cybersecurity signals like IP risk scores, failed login attempts, device changes, and VPN usage patterns.
 
-## ✨ Features
+## Features
 
 - **Dual-Stage Detection**: Anomaly detection followed by classification for improved accuracy
 - **Cybersecurity Integration**: Incorporates behavioral and network security indicators
@@ -18,15 +18,15 @@ The system enhances traditional financial features with cybersecurity signals li
 - **Model Persistence**: Saves trained models for reuse and deployment
 - **Comprehensive Analysis**: Handles 28 PCA-transformed features plus custom security metrics
 
-## 🔧 Technology Stack
+## Technology Stack
 
 - **Machine Learning**: scikit-learn (Isolation Forest, Random Forest)
 - **Web Framework**: Streamlit
 - **Data Processing**: pandas, numpy
 - **Model Persistence**: joblib
 - **Visualization**: Streamlit components
-
-## 📊 Dataset
+  
+##  Dataset
 
 The system expects a credit card dataset with the following structure:
 - **V1-V28**: PCA-transformed features (anonymized)
@@ -40,7 +40,7 @@ Additional cybersecurity features are generated:
 - **device_change**: Whether device was changed (0/1)
 - **vpn_usage**: VPN usage indicator (0/1)
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**:
    ```bash
@@ -62,7 +62,7 @@ Additional cybersecurity features are generated:
    mkdir models
    ```
 
-## 🏃‍♂️ Usage
+## Usage
 
 ### Training Models
 
@@ -89,7 +89,7 @@ The dashboard provides:
 - **Real-time Analysis**: Instant fraud risk assessment
 - **Visual Feedback**: Color-coded alerts and status messages
 
-## 🔬 Model Architecture
+## Model Architecture
 
 ### Stage 1: Anomaly Detection
 - **Algorithm**: Isolation Forest
@@ -114,7 +114,7 @@ The dashboard provides:
 - **Memory Usage**: Random Forest with 200 estimators requires significant RAM
 - **Scalability**: Current implementation suitable for datasets up to ~100K transactions
 
-## 🔒 Security Features
+## Security Features
 
 The system incorporates multiple cybersecurity indicators:
 
@@ -125,7 +125,7 @@ The system incorporates multiple cybersecurity indicators:
 | Device Change | New device detection | 0/1 |
 | VPN Usage | VPN/proxy detection | 0/1 |
 
-## 🛠️ Customization
+## Customization
 
 ### Adjusting Detection Sensitivity
 Modify the contamination parameter in `main.py`:
@@ -152,11 +152,11 @@ rf = RandomForestClassifier(
     random_state=42
 )
 ```
-## ⚠️ Disclaimer
+## Disclaimer
 
 This system is for educational and research purposes. For production fraud detection, implement additional security measures, data validation, and regulatory compliance checks.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Real-time model updates
 - [ ] Advanced feature engineering
